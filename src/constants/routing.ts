@@ -11,6 +11,7 @@ import {
   DAI_ARBITRUM_ONE,
   DAI_OPTIMISM,
   DAI_POLYGON,
+  DAI_BASE,
   ETH2X_FLI,
   FEI,
   FRAX,
@@ -26,16 +27,19 @@ import {
   USDC_BNB_CHAIN,
   USDC_MAINNET,
   USDC_POLYGON,
+  USDC_BASE,
   USDT,
   USDT_ARBITRUM_ONE,
   USDT_BNB_CHAIN,
   USDT_OPTIMISM,
   USDT_POLYGON,
+  USDT_BASE,
   WBTC,
   WBTC_ARBITRUM_ONE,
   WBTC_OPTIMISM,
   WETH_POLYGON,
   WRAPPED_NATIVE_CURRENCY,
+  
 } from './tokens'
 
 type ChainTokenList = {
@@ -65,6 +69,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     USDT_OPTIMISM,
     WBTC_OPTIMISM,
   ],
+
   [SupportedChainId.ARBITRUM_ONE]: [
     ...WRAPPED_NATIVE_CURRENCIES_ONLY[SupportedChainId.ARBITRUM_ONE],
     DAI_ARBITRUM_ONE,
@@ -92,6 +97,13 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     USDT_BNB_CHAIN,
     ...WRAPPED_NATIVE_CURRENCIES_ONLY[SupportedChainId.BNB],
   ],
+  [SupportedChainId.BASE]: [
+    ...WRAPPED_NATIVE_CURRENCIES_ONLY[SupportedChainId.BASE],
+    DAI_BASE,
+    USDC_BASE,
+    USDT_BASE,
+
+  ]
 }
 export const ADDITIONAL_BASES: { [chainId: number]: { [tokenAddress: string]: Token[] } } = {
   [SupportedChainId.MAINNET]: {

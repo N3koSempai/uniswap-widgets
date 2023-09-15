@@ -40,6 +40,10 @@ describe('CommonBases', () => {
     itRendersCorrectCurrenciesForChainId(ChainId.OPTIMISM)
   })
 
+  it('render correct currencies, base'),() => {
+    itRendersCorrectCurrenciesForChainId(ChainId.BASE)
+  }
+
   it('renders correct currencies, arbitrum', () => {
     itRendersCorrectCurrenciesForChainId(ChainId.ARBITRUM_ONE)
   })

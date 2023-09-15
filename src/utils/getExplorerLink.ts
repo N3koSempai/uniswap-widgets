@@ -13,6 +13,9 @@ const ETHERSCAN_PREFIXES: { [chainId: number]: string } = {
   [SupportedChainId.CELO]: 'https://celoscan.io',
   [SupportedChainId.CELO_ALFAJORES]: 'https://alfajores.celoscan.io',
   [SupportedChainId.BNB]: 'https://bscscan.com',
+  //! base need tested the explorer config
+  [SupportedChainId.BASE]: 'https://basescan.org',
+  [SupportedChainId.BASE_GOERLI]: 'https://goerli.basescan.org',
 }
 
 export enum ExplorerDataType {

@@ -86,4 +86,14 @@ export const JSON_RPC_FALLBACK_ENDPOINTS: Record<SupportedChainId, string[]> = {
     'https://bsc-dataseed4.defibit.io',
     'https://rpc.ankr.com/bsc',
   ],
+  [SupportedChainId.BASE]: [
+    // "Safe" URLs
+    'https://rpc.ankr.com/base',
+
+
+
+  ],
+  [SupportedChainId.BASE_GOERLI]: [
+    'https://rpc.ankr.com/base_goerli'
+  ]
 }

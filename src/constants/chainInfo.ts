@@ -5,7 +5,8 @@ import celoLogo from 'assets/svg/celo_logo.svg'
 import optimismLogoUrl from 'assets/svg/optimism_logo.svg'
 import polygonMaticLogo from 'assets/svg/polygon-matic-logo.svg'
 import ms from 'ms.macro'
-
+import Base_blue from 'assets/svg/base_blue.svg'
+import Base_testnet from 'assets/svg/base_testnet.svg'
 import { SupportedChainId, SupportedL1ChainId, SupportedL2ChainId } from './chains'
 
 export const STANDARD_L1_BLOCK_TIME = ms`12s`
@@ -237,6 +238,39 @@ const CHAIN_INFO: ChainInfoMap = {
     color: '#F0B90B',
     backgroundColor: '#F0B90B',
   },
+  
+    [SupportedChainId.BASE]: {
+      networkType: NetworkType.L2,
+      blockWaitMsBeforeWarning: ms`25m`,
+      bridge: 'https://bridge.base.org',
+      docs: 'https://docs.base.org',
+      explorer: 'https://basescan.org/',
+      infoLink: 'https://info.uniswap.org/#/base/',
+      label: 'Base',
+      logoUrl: Base_blue,
+      statusPage: 'https://status.base.org/',
+      helpCenterUrl: 'https://support.uniswap.org/hc/en-us/articles/18099721514125-What-is-the-Base-network-',
+      nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+      color: '#FF0420',
+      backgroundColor: '#ff042029',
+
+  },
+  [SupportedChainId.BASE_GOERLI]: {
+    networkType: NetworkType.L2,
+    blockWaitMsBeforeWarning: ms`25m`,
+    bridge: 'https://goerli-bridge.base.org/',
+    docs: 'https://docs.base.org',
+    explorer: 'https://goerli.basescan.org/',
+    infoLink: 'https://info.uniswap.org/#/base/',
+    label: 'Base Goerli',
+    logoUrl: Base_testnet,
+    statusPage: 'https://status.base.org/',
+    helpCenterUrl: 'https://support.uniswap.org/hc/en-us/articles/18099721514125-What-is-the-Base-network-',
+    nativeCurrency: { name: 'Base Goerli Ether', symbol: 'görOpETH', decimals: 18 },
+    color: '#FF0420',
+    backgroundColor: '#ff042029',
+
+},
 }
 
 export function getChainInfo(chainId: SupportedL1ChainId): L1ChainInfo

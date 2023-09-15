@@ -130,6 +130,24 @@ export const USDC_BNB_CHAIN = new Token(
   'USDC',
   'USDC'
 )
+export const USDC_BASE = new Token(
+  SupportedChainId.BASE,
+  '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
+  18,
+  'USDC',
+  'USD coin'
+
+)
+
+export const USDC_BASE_GOERLI = new Token(
+  SupportedChainId.BASE_GOERLI,
+  '0x26CA91ee10cEeA2b53cA8BAf7a0D8Ef929FB3525',
+  18,
+  'USDC',
+  'USD coin testnet'
+)
+
+
 export const USDC: { [chainId in SupportedChainId]: Token } = {
   [SupportedChainId.MAINNET]: USDC_MAINNET,
   [SupportedChainId.ARBITRUM_ONE]: USDC_ARBITRUM,
@@ -145,6 +163,8 @@ export const USDC: { [chainId in SupportedChainId]: Token } = {
   [SupportedChainId.KOVAN]: USDC_KOVAN,
   [SupportedChainId.ROPSTEN]: USDC_ROPSTEN,
   [SupportedChainId.BNB]: USDC_BNB_CHAIN,
+  [SupportedChainId.BASE] : USDC_BASE,
+  [SupportedChainId.BASE_GOERLI]: USDC_BASE_GOERLI
 }
 export const DAI_POLYGON = new Token(
   SupportedChainId.POLYGON,
@@ -407,6 +427,78 @@ export const DAI_BNB_CHAIN = new Token(
   'DAI'
 )
 
+//base mainnet
+
+// opcional token of dex. (delete if you want)
+export const Based = new Token(
+  SupportedChainId.BASE,
+  '0x64017d87F039E00e4E192a7277D4cD0F7e9f13FB',
+  18,
+  "BDSM",
+  'Based'
+)
+
+
+export const CBETHbase = new Token(
+  SupportedChainId.BASE,
+  '0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22',
+  18,
+  'cbETH',
+  'Coinbase Wrapped Staked ETH'
+) // goerli  "address": "0xD0bb78d0B337aA6D3A0530DD2e58560bf00851f1"
+
+
+
+export const DAI_BASE = new Token(
+  SupportedChainId.BASE,
+  '0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb',
+  18,
+  'DAI',
+  'Dai Stablecoin'
+
+)
+
+
+export const DAI_base_goerli = new Token(
+  SupportedChainId.BASE_GOERLI,
+  '0x174956bDfbCEb6e53089297cce4fE2825E58d92C',
+  18,
+  'DAI',
+  'DAI goerli'
+
+)
+
+export const USDT_BASE_GOERLI = new Token(
+  SupportedChainId.BASE_GOERLI,
+  '0xD64a51459715C32BB3C54Ab1dE619e6cc158fBFf',
+  18,
+  'USDT',
+  'USDT goerli'
+)
+
+export const USDT_BASE = new Token(
+  SupportedChainId.BASE,
+  '0xfe668A3d6f05e7799AAE04659fC274AC00d094c0',
+  18,
+  'USDT',
+  'USDT'
+)
+
+export const CBETH_goerli = new Token(
+SupportedChainId.BASE_GOERLI,
+  '0xD0bb78d0B337aA6D3A0530DD2e58560bf00851f1',
+  18,
+  'cbETH ',
+  'Coinbase Wrapped goerli ETH'
+)
+
+
+
+
+
+
+
+
 function isBnbChain(chainId: number): chainId is SupportedChainId.BNB {
   return chainId === SupportedChainId.BNB
 }
@@ -454,6 +546,22 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
     18,
     'WETH',
     'Wrapped Ether'
+  ),
+  [SupportedChainId.BASE]: new Token(
+    SupportedChainId.BASE,
+    '0x4200000000000000000000000000000000000006',
+    18,
+    'WETH',
+    'Wrapped Ether'
+
+  ),
+  [SupportedChainId.BASE_GOERLI]: new Token(
+    SupportedChainId.BASE_GOERLI,
+    '0x4200000000000000000000000000000000000006',
+    18,
+    'WETH',
+    'Wrapped Ether'
+
   ),
   [SupportedChainId.ARBITRUM_ONE]: new Token(
     SupportedChainId.ARBITRUM_ONE,
@@ -574,5 +682,7 @@ export const TOKEN_SHORTHANDS: { [shorthand: string]: { [chainId in SupportedCha
     [SupportedChainId.ROPSTEN]: USDC_ROPSTEN.address,
     [SupportedChainId.CELO]: PORTAL_USDC_CELO.address,
     [SupportedChainId.CELO_ALFAJORES]: USDC_CELO_ALFAJORES.address,
+    [SupportedChainId.BASE]: USDC_BASE.address,
+    [SupportedChainId.BASE_GOERLI]: USDC_BASE_GOERLI.address
   },
 }

@@ -5,6 +5,7 @@ type AddressMap = { [chainId: number]: string }
 
 export const UNI_ADDRESS: AddressMap = constructSameAddressMap('0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984')
 
+//! mark of reference. @n3kosempai
 export const MULTICALL_ADDRESS: AddressMap = {
   ...constructSameAddressMap('0x1F98415757620B543A52E61c46B32eB19261F984', [
     SupportedChainId.OPTIMISM_GOERLI,
@@ -16,6 +17,8 @@ export const MULTICALL_ADDRESS: AddressMap = {
   [SupportedChainId.ARBITRUM_RINKEBY]: '0xa501c031958F579dB7676fF1CE78AD305794d579',
   [SupportedChainId.CELO]: '0x633987602DE5C4F337e3DbF265303A1080324204',
   [SupportedChainId.CELO_ALFAJORES]: '0x633987602DE5C4F337e3DbF265303A1080324204',
+  [SupportedChainId.BASE]: '0x091e99cb1C49331a94dD62755D168E941AbD0693',
+  [SupportedChainId.BASE_GOERLI]: '0x091e99cb1C49331a94dD62755D168E941AbD0693',
 }
 
 export const SWAP_ROUTER_ADDRESSES: AddressMap = {
@@ -29,6 +32,8 @@ export const SWAP_ROUTER_ADDRESSES: AddressMap = {
   ]),
   [SupportedChainId.CELO]: '0x5615CDAb10dc425a742d643d949a7F474C01abc4',
   [SupportedChainId.CELO_ALFAJORES]: '0x5615CDAb10dc425a742d643d949a7F474C01abc4',
+  [SupportedChainId.BASE]: '0x2626664c2603336E57B271c5C0b26F421741e481',
+  [SupportedChainId.BASE_GOERLI]: '0x2626664c2603336E57B271c5C0b26F421741e481',
 }
 
 export const ARGENT_WALLET_DETECTOR_ADDRESS: AddressMap = {
